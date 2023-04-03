@@ -3,19 +3,19 @@
   
 var gender;
   let personGender=prompt("What Is Your Gender ?");
-  if(personGender=="man" ||personGender=="MAN" ||personGender=="Man" ){
-    gender="Mr";
-  }else if(personGender=="woman" ||personGender=="WOMAN"||personGender=="Woman"){
+  if(personGender.localeCompare("male")){
     gender="Ms";
+  }else if(personGender.localeCompare("female") ){
+    gender="Mr";
   }else{
      gender=" ";
   }
 
   let personAge=prompt("Enter Your Age!");
-  if(personAge>=0){
+  if(personAge==0){
     let mas="Yor Age Is Equal Zero";
     alert(mas);
-  }else{
+  }else if(personAge<0){
     let mas="Yor Age Is Less Than Zero";
     alert(mas);
   }
