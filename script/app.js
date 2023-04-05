@@ -2,12 +2,16 @@
   let personName=prompt("Enter Your Name !");
   
 var gender;
+var genderMale="male";
+var genderFemale="female";
+
   let personGender=prompt("What Is Your Gender ?");
-  if(personGender.localeCompare("male")){
-    gender="Ms";
-  }else if(personGender.localeCompare("female") ){
+    if(personGender.toUpperCase()==genderFemale.toUpperCase()) {
+    gender="Ms";}
+  else if(personGender.toUpperCase()==genderMale.toUpperCase()){
     gender="Mr";
-  }else{
+  }
+  else {
      gender=" ";
   }
 
