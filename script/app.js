@@ -1,5 +1,6 @@
 'use strict';
  var useData;
+ let yesNoQuestion;
 function selectGender(){
   let personGender=prompt("What Is Your Gender ?");
   var gender;
@@ -73,9 +74,14 @@ function getMoreData(){
     let finishStudy = prompt ("Are You Still Stady Or Not ?")
     let answerStudy = checkAnswer(finishStudy);
     useData.push(answerStudy);
-    console.log(answerJop+" " + answerDrive + " "+ answerStudy);
-     
+    yesNoQuestion=[answerJop,answerDrive,answerStudy];
+     printArray();
     console.log(useData);
+  }
+  function printArray(){
+    for(let i = 0 ; i<yesNoQuestion.length;i++){
+      console.log(yesNoQuestion[i]);
+    }
   }
   getMoreData();
 
